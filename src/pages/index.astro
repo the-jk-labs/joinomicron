@@ -1,12 +1,22 @@
 ---
 import { Image } from "astro:assets";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import SiteHeader from "../components/landing/SiteHeader.svelte";
 import Hero from "../components/landing/Hero.svelte";
+import OurStory from "../components/landing/OurStory.svelte";
+import Features from "../components/landing/Features.svelte";
+import Metrics from "../components/landing/Metrics.svelte";
+import Faq from "../components/landing/Faq.svelte";
+import Contact from "../components/landing/Contact.svelte";
+import SiteFooter from "../components/landing/SiteFooter.svelte";
 import landing from "../assets/landing.png";
 ---
 
 <BaseLayout>
-  <div class="relative min-h-dvh w-full overflow-hidden">
+  <SiteHeader />
+
+  <!-- hero: full-height artwork panel -->
+  <div class="relative flex min-h-dvh w-full items-center overflow-hidden">
     <Image
       src={landing}
       alt=""
@@ -16,8 +26,19 @@ import landing from "../assets/landing.png";
       fetchpriority="high"
       class="pointer-events-none absolute inset-0 -z-10 h-full w-full object-cover object-[18%_top] select-none sm:object-[70%_center]"
     />
-    <main class="relative z-10 w-full px-6 pb-24 sm:px-12 lg:pl-[7.5%] lg:pr-[6%]">
+    <main class="relative z-10 w-full px-6 pb-16 sm:px-12 lg:pr-[6%] lg:pl-[7.5%]">
       <Hero />
     </main>
   </div>
+
+  <!-- scrollable content -->
+  <div class="bg-white">
+    <OurStory />
+    <Features />
+    <Metrics />
+    <Faq />
+    <Contact />
+  </div>
+
+  <SiteFooter />
 </BaseLayout>

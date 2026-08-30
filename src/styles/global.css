@@ -41,6 +41,26 @@
     Roboto, "Helvetica Neue", Arial, sans-serif;
   --font-serif: "Source Serif 4", ui-serif, Georgia, Cambria, "Times New Roman",
     Times, serif;
+
+  --animate-accordion-down: accordion-down 200ms ease-out;
+  --animate-accordion-up: accordion-up 200ms ease-out;
+
+  @keyframes accordion-down {
+    from {
+      height: 0;
+    }
+    to {
+      height: var(--bits-accordion-content-height);
+    }
+  }
+  @keyframes accordion-up {
+    from {
+      height: var(--bits-accordion-content-height);
+    }
+    to {
+      height: 0;
+    }
+  }
 }
 
 html,

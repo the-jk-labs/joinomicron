@@ -4,19 +4,10 @@
   import FeatureItem from "./FeatureItem.svelte";
 </script>
 
-<div class="max-w-[660px] pt-8 sm:pt-10 lg:pt-[13%]">
-  <!-- logo -->
-  <div class="relative inline-flex">
-    <span
-      aria-hidden="true"
-      class="absolute -inset-2.5 -z-10 rounded-full bg-white/60 blur-md"
-    ></span>
-    <img src="/logo.png" alt="Omicron" class="h-12 w-12 sm:h-[52px] sm:w-[52px]" />
-  </div>
-
+<div class="max-w-[660px] pt-20">
   <!-- headline -->
   <h1
-    class="font-serif mt-5 text-[44px] leading-[1.06] font-bold tracking-tight text-[#101418] sm:text-[56px]"
+    class="font-serif text-[44px] leading-[1.06] font-bold tracking-tight text-[#101418] sm:text-[56px]"
   >
     Write freely.<br />Share universally.
   </h1>
