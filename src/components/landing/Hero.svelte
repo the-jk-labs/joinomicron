@@ -58,7 +58,9 @@
   </div>
 
   <!-- tagline -->
-  <p class="mt-12 text-[15px] font-normal text-[#57606b]">
+  <p
+    class="mt-12 text-[16px] font-normal text-[#3a4048] [text-shadow:0_1px_12px_rgba(255,255,255,0.8)]"
+  >
     No tracking. No ads. Just ideas.
   </p>
 </div>
