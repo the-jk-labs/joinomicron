@@ -1,0 +1,23 @@
+---
+import { Image } from "astro:assets";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Hero from "../components/landing/Hero.svelte";
+import landing from "../assets/landing.png";
+---
+
+<BaseLayout>
+  <div class="relative min-h-dvh w-full overflow-hidden">
+    <Image
+      src={landing}
+      alt=""
+      widths={[768, 1280, 1536, 2048]}
+      sizes="100vw"
+      loading="eager"
+      fetchpriority="high"
+      class="pointer-events-none absolute inset-0 -z-10 h-full w-full object-cover object-[70%_center] select-none"
+    />
+    <main class="relative z-10 mx-auto w-full max-w-6xl px-6 pb-24 sm:px-10">
+      <Hero />
+    </main>
+  </div>
+</BaseLayout>
