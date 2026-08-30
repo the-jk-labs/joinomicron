@@ -10,14 +10,14 @@
   let { title, lines, children }: Props = $props();
 </script>
 
-<div class="flex flex-col items-start gap-2">
+<div class="flex flex-col items-start">
   <span class="inline-flex">
     {@render children()}
   </span>
-  <h3 class="text-base font-semibold tracking-tight text-[#101418]">
+  <h3 class="mt-3 text-[17px] font-semibold tracking-tight text-[#101418]">
     {title}
   </h3>
-  <p class="text-[15px] leading-snug text-[#3f4650]">
+  <p class="mt-1.5 text-[15px] leading-[1.4] text-[#3a4048]">
     {lines[0]}<br />{lines[1]}
   </p>
 </div>
