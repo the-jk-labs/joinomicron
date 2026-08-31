@@ -35,28 +35,29 @@
 </script>
 
 <section id="faq" class="border-t border-[#e8e4dc] dark:border-white/8">
-  <div class="mx-auto max-w-[1200px] px-6 py-20 sm:px-10 sm:py-28">
+  <div class="mx-auto max-w-[1200px] px-6 py-16 sm:px-10 sm:py-20 lg:py-28">
     <div
-      class="grid grid-cols-1 gap-12 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-16"
+      class="flex flex-col gap-10 sm:gap-12 lg:grid lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-x-16 lg:gap-y-0"
     >
-      <div>
-        <h2
-          class="font-serif text-[34px] leading-[1.1] font-bold tracking-tight text-[#101418] sm:text-[42px] dark:text-[#f4f4ef]"
-        >
-          Frequently asked
-        </h2>
-        <img
-          src={image.src}
-          srcset={image.srcset}
-          sizes="(max-width: 1024px) 90vw, 360px"
-          width={image.attributes.width}
-          height={image.attributes.height}
-          alt="Omicron FAQ illustration"
-          class="mt-8 aspect-[1536/1024] w-full max-w-[360px]"
-        />
-      </div>
+      <h2
+        class="order-1 font-serif text-[34px] leading-[1.1] font-bold tracking-tight text-[#101418] sm:text-[42px] lg:col-start-1 lg:row-start-1 dark:text-[#f4f4ef]"
+      >
+        Frequently asked
+      </h2>
+      <img
+        src={image.src}
+        srcset={image.srcset}
+        sizes="(max-width: 1024px) 90vw, 360px"
+        width={image.attributes.width}
+        height={image.attributes.height}
+        alt="Omicron FAQ illustration"
+        class="order-3 aspect-[1536/1024] w-full max-w-[360px] lg:order-none lg:col-start-1 lg:row-start-2 lg:mt-8"
+      />
 
-      <Accordion.Root type="single" class="w-full lg:self-center">
+      <Accordion.Root
+        type="single"
+        class="order-2 w-full lg:order-none lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:self-center"
+      >
         {#each faqs as faq, i (faq.question)}
           <Accordion.Item
             value="faq-{i}"

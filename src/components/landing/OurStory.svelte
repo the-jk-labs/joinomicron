@@ -4,26 +4,29 @@
   let { image }: { image: GetImageResult } = $props();
 </script>
 
-<section id="story" class="mx-auto max-w-[1200px] px-6 py-20 sm:px-10 sm:py-28">
-  <div class="grid grid-cols-1 gap-12 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-16">
-    <div>
-      <h2
-        class="font-serif text-[34px] leading-[1.1] font-bold tracking-tight text-[#101418] sm:text-[42px] dark:text-[#f4f4ef]"
-      >
-        Our story
-      </h2>
-      <img
-        src={image.src}
-        srcset={image.srcset}
-        sizes="(max-width: 1024px) 90vw, 360px"
-        width={image.attributes.width}
-        height={image.attributes.height}
-        alt="Omicron writer rabbit illustration"
-        class="mt-8 w-full max-w-[360px]"
-      />
-    </div>
+<section id="story" class="mx-auto max-w-[1200px] px-6 py-16 sm:px-10 sm:py-20 lg:py-28">
+  <div
+    class="flex flex-col gap-10 sm:gap-12 lg:grid lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-x-16 lg:gap-y-0"
+  >
+    <h2
+      class="order-1 font-serif text-[34px] leading-[1.1] font-bold tracking-tight text-[#101418] sm:text-[42px] lg:col-start-1 lg:row-start-1 dark:text-[#f4f4ef]"
+    >
+      Our story
+    </h2>
 
-    <div class="space-y-5 text-[17px] leading-[1.65] text-[#3a4048] dark:text-[#a9b2bd]">
+    <img
+      src={image.src}
+      srcset={image.srcset}
+      sizes="(max-width: 1024px) 90vw, 360px"
+      width={image.attributes.width}
+      height={image.attributes.height}
+      alt="Omicron writer rabbit illustration"
+      class="order-3 w-full max-w-[360px] lg:order-none lg:col-start-1 lg:row-start-2 lg:mt-8"
+    />
+
+    <div
+      class="order-2 space-y-5 text-[17px] leading-[1.65] text-[#3a4048] lg:order-none lg:col-start-2 lg:row-span-2 lg:row-start-1 dark:text-[#a9b2bd]"
+    >
       <p>
         Omicron began with a simple observation: the web's best writing
         shouldn't be locked inside walled gardens. We believe publishing online

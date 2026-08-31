@@ -71,7 +71,7 @@
 
     <!-- bottom row -->
     <div
-      class="mt-14 flex flex-wrap items-center justify-between gap-6 border-t border-white/10 pt-8"
+      class="mt-14 flex flex-col items-center gap-6 border-t border-white/10 pt-8 text-center sm:flex-row sm:justify-between sm:text-left"
     >
       <p class="text-[13px] text-[#7d848d]">
         Copyright &copy; 2026 Omicron. Free and open source software.
