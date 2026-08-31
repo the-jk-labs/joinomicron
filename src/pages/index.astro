@@ -10,9 +10,16 @@ import Contact from "../components/landing/Contact.svelte";
 import SiteFooter from "../components/landing/SiteFooter.svelte";
 import landing from "../assets/landing.png";
 import writerRabbit from "../assets/writer_rabbit.png";
+import faqArt from "../assets/FAQ.png";
 
 const rabbitImage = await getImage({
   src: writerRabbit,
+  width: 720,
+  format: "webp",
+});
+
+const faqImage = await getImage({
+  src: faqArt,
   width: 720,
   format: "webp",
 });
@@ -41,7 +48,7 @@ const rabbitImage = await getImage({
   <div class="bg-white">
     <OurStory image={rabbitImage} />
     <Features />
-    <Faq client:load />
+    <Faq client:load image={faqImage} />
     <Contact />
   </div>
 

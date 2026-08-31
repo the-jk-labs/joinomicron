@@ -1,6 +1,9 @@
 <script lang="ts">
   import { Accordion } from "bits-ui";
   import { ChevronDown } from "lucide-svelte";
+  import type { GetImageResult } from "astro:assets";
+
+  let { image }: { image: GetImageResult } = $props();
 
   const faqs = [
     {
@@ -42,18 +45,18 @@
         >
           Frequently asked
         </h2>
-        <p class="mt-4 text-[17px] leading-[1.6] text-[#3a4048]">
-          Can't find what you're looking for?
-          <a
-            href="#contact"
-            class="font-medium text-[#5b4fc4] underline underline-offset-4 transition-colors hover:text-[#463aa8]"
-          >
-            Contact us
-          </a>
-        </p>
+        <img
+          src={image.src}
+          srcset={image.srcset}
+          sizes="(max-width: 1024px) 90vw, 360px"
+          width={image.attributes.width}
+          height={image.attributes.height}
+          alt="Omicron FAQ illustration"
+          class="mt-8 aspect-[1349/1166] w-full max-w-[360px] rounded-2xl object-cover"
+        />
       </div>
 
-      <Accordion.Root type="single" class="w-full">
+      <Accordion.Root type="single" class="w-full lg:self-center">
         {#each faqs as faq, i (faq.question)}
           <Accordion.Item
             value="faq-{i}"
