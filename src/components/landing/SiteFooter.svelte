@@ -38,7 +38,7 @@
       <!-- brand -->
       <div>
         <a href="/" class="inline-flex items-center gap-2.5">
-          <img src="/logo.png" alt="Omicron" class="h-10 w-10 invert" />
+          <img src="/logo.png" alt="Omicron" class="h-10 w-10" />
         </a>
         <p class="mt-4 max-w-[300px] text-[15px] leading-[1.6] text-[#9aa1a9]">
           A federated blogging platform that belongs to everyone.
