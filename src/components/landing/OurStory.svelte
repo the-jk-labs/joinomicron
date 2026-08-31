@@ -15,22 +15,23 @@
 
     <div class="space-y-5 text-[17px] leading-[1.65] text-[#3a4048]">
       <p>
-        Omicron began with a simple observation: the best writing on the web is
-        scattered across platforms that answer to advertisers, not readers. We
-        believe publishing online should work more like email — open,
-        interoperable, and owned by no one.
+        Omicron began with a simple observation: the web's best writing
+        shouldn't be locked inside walled gardens. We believe publishing online
+        should work more like email: open, interoperable, and owned by no one.
       </p>
       <p>
         Built on open federation protocols, Omicron lets writers publish from
         their own corner of the internet while reaching readers everywhere.
         Follow a blog from any compatible platform, reply across instances, and
-        take your audience with you if you ever move.
+        take your audience with you if you ever move, with no vendor lock-in.
       </p>
       <p>
         The software is free and open source, developed in the open and shaped
-        by the community that runs it. There is no algorithm deciding what you
-        see, no engagement metrics optimizing your attention away — just
-        chronological writing from people you chose to follow.
+        by the community that runs it. We support the fediverse, freedom, and
+        creators earning a living on their own terms. Ethical monetization
+        (paid subscriptions, donations, honest sponsorships) is welcome here.
+        What we don't support is the surveillance model: anti-privacy ads and
+        monopolies that track and gatekeep the open web.
       </p>
       <p>
         We are still early, and deliberately so. Omicron grows instance by
