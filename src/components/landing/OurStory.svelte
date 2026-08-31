@@ -6,12 +6,11 @@
       >
         Our story
       </h2>
-      <a
-        href="#contact"
-        class="mt-6 inline-block text-[15px] font-medium text-[#5b4fc4] underline underline-offset-4 transition-colors hover:text-[#463aa8]"
-      >
-        Get in touch &rarr;
-      </a>
+      <img
+        src="/writer_rabbit.png"
+        alt="Omicron writer rabbit illustration"
+        class="mt-8 aspect-[1349/1166] w-full max-w-[360px] rounded-2xl object-cover"
+      />
     </div>
 
     <div class="space-y-5 text-[17px] leading-[1.65] text-[#3a4048]">
