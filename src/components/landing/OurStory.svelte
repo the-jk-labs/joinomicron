@@ -19,7 +19,7 @@
         width={image.attributes.width}
         height={image.attributes.height}
         alt="Omicron writer rabbit illustration"
-        class="mt-8 w-full max-w-[360px] rounded-2xl object-cover dark:bg-[#14181f] dark:p-4 dark:ring-1 dark:ring-white/8"
+        class="mt-8 w-full max-w-[360px]"
       />
     </div>
 

@@ -52,7 +52,7 @@
           width={image.attributes.width}
           height={image.attributes.height}
           alt="Omicron FAQ illustration"
-          class="mt-8 aspect-[1349/1166] w-full max-w-[360px] rounded-2xl object-cover dark:bg-[#14181f] dark:p-4 dark:ring-1 dark:ring-white/8"
+          class="mt-8 aspect-[1536/1024] w-full max-w-[360px]"
         />
       </div>
 
