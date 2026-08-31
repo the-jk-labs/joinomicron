@@ -31,7 +31,7 @@
   ];
 </script>
 
-<section id="faq" class="border-t border-[#e8e4dc] bg-[#faf8f4]">
+<section id="faq" class="border-t border-[#e8e4dc]">
   <div class="mx-auto max-w-[1200px] px-6 py-20 sm:px-10 sm:py-28">
     <div
       class="grid grid-cols-1 gap-12 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-16"
