@@ -1,28 +1,25 @@
 <script lang="ts">
+  const email = "omicronhq@protonmail.com";
+
   const contacts = [
     {
       title: "Press and media",
-      email: "press@omicron.blog",
       note: "For interviews, stories, and press-related questions.",
     },
     {
       title: "General questions",
-      email: "hello@omicron.blog",
       note: "New to Omicron or the fediverse? Start here.",
     },
     {
       title: "Hosting and instances",
-      email: "hosting@omicron.blog",
       note: "Questions about running or joining an instance.",
     },
     {
       title: "Legal and trademarks",
-      email: "legal@omicron.blog",
       note: "For legal notices, trademark, and brand usage.",
     },
     {
       title: "Security reports",
-      email: "security@omicron.blog",
       note: "To report vulnerabilities, please see our security policy first.",
     },
   ];
@@ -40,15 +37,14 @@
           Contact us
         </h2>
         <p class="mt-4 max-w-[420px] text-[17px] leading-[1.6] text-[#3a4048]">
-          We read everything, and a human replies. Pick the address that fits
-          best — or write to
+          We read everything, and a human replies. Write to us at
           <a
-            href="mailto:hello@omicron.blog"
+            href="mailto:{email}"
             class="font-medium text-[#5b4fc4] underline underline-offset-4 transition-colors hover:text-[#463aa8]"
           >
-            hello@omicron.blog
+            {email}
           </a>
-          and we'll route it.
+          and we'll route it to the right place.
         </p>
       </div>
 
@@ -61,10 +57,10 @@
               {contact.title}
             </h3>
             <a
-              href="mailto:{contact.email}"
+              href="mailto:{email}"
               class="mt-1.5 inline-block text-[15px] font-medium text-[#5b4fc4] underline underline-offset-4 transition-colors hover:text-[#463aa8]"
             >
-              {contact.email}
+              {email}
             </a>
             <p class="mt-1.5 text-[14px] leading-[1.5] text-[#6a7078]">
               {contact.note}
