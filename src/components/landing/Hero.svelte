@@ -35,13 +35,13 @@
   <!-- CTAs -->
   <div class="mt-16 flex flex-wrap items-center gap-5">
     <Button.Root
-      href="https://omicron.blog/signup"
+      href="https://omicron.blog/register"
       class="inline-flex h-12 items-center justify-center rounded-full bg-[#101318] px-7 text-[17px] font-semibold text-white shadow-sm transition-colors hover:bg-[#262b31] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#101318] active:bg-black"
     >
       Get Started
     </Button.Root>
     <Button.Root
-      href="/learn"
+      href="https://docs.omicron.blog/"
       class="inline-flex h-12 items-center justify-center rounded-full border-[1.5px] border-[#4b525b]/60 bg-white/70 px-7 text-[17px] font-semibold text-[#2a2f36] backdrop-blur-sm transition-colors hover:bg-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#101318]"
     >
       Learn More

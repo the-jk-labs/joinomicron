@@ -15,7 +15,7 @@
       heading: "Resources",
       links: [
         { label: "Source code", href: "#" },
-        { label: "Documentation", href: "#" },
+        { label: "Documentation", href: "https://docs.omicron.blog/" },
         { label: "Blog", href: "https://omicron.blog" },
         { label: "Brand assets", href: "#" },
       ],

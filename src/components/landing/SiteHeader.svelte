@@ -34,7 +34,7 @@
     </nav>
 
     <Button.Root
-      href="https://omicron.blog/signup"
+      href="https://omicron.blog/register"
       class="inline-flex h-10 items-center justify-center rounded-full bg-[#101318] px-5 text-[15px] font-semibold text-white shadow-sm transition-colors hover:bg-[#262b31] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#101318] active:bg-black"
     >
       Get Started
