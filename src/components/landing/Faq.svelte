@@ -34,14 +34,14 @@
   ];
 </script>
 
-<section id="faq" class="border-t border-[#e8e4dc]">
+<section id="faq" class="border-t border-[#e8e4dc] dark:border-white/8">
   <div class="mx-auto max-w-[1200px] px-6 py-20 sm:px-10 sm:py-28">
     <div
       class="grid grid-cols-1 gap-12 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-16"
     >
       <div>
         <h2
-          class="font-serif text-[34px] leading-[1.1] font-bold tracking-tight text-[#101418] sm:text-[42px]"
+          class="font-serif text-[34px] leading-[1.1] font-bold tracking-tight text-[#101418] sm:text-[42px] dark:text-[#f4f4ef]"
         >
           Frequently asked
         </h2>
@@ -52,7 +52,7 @@
           width={image.attributes.width}
           height={image.attributes.height}
           alt="Omicron FAQ illustration"
-          class="mt-8 aspect-[1349/1166] w-full max-w-[360px] rounded-2xl object-cover"
+          class="mt-8 aspect-[1349/1166] w-full max-w-[360px] rounded-2xl object-cover dark:bg-[#14181f] dark:p-4 dark:ring-1 dark:ring-white/8"
         />
       </div>
 
@@ -60,20 +60,20 @@
         {#each faqs as faq, i (faq.question)}
           <Accordion.Item
             value="faq-{i}"
-            class="border-b border-[#e0dcd4] first:border-t"
+            class="border-b border-[#e0dcd4] first:border-t dark:border-white/10"
           >
             <Accordion.Header>
               <Accordion.Trigger
-                class="group flex w-full items-center justify-between gap-4 py-5 text-left text-[17px] font-semibold tracking-tight text-[#101418] transition-colors hover:text-[#5b4fc4] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#5b4fc4]"
+                class="group flex w-full items-center justify-between gap-4 py-5 text-left text-[17px] font-semibold tracking-tight text-[#101418] transition-colors hover:text-[#5b4fc4] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#5b4fc4] dark:text-[#eef0f3] dark:hover:text-[#ab92f0] dark:focus-visible:outline-[#ab92f0]"
               >
                 {faq.question}
                 <ChevronDown
-                  class="h-5 w-5 shrink-0 text-[#8a8378] transition-transform duration-200 group-data-[state=open]:rotate-180"
+                  class="h-5 w-5 shrink-0 text-[#8a8378] transition-transform duration-200 group-data-[state=open]:rotate-180 dark:text-[#7d8491]"
                 />
               </Accordion.Trigger>
             </Accordion.Header>
             <Accordion.Content
-              class="overflow-hidden pb-5 text-[15px] leading-[1.65] text-[#3a4048] data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
+              class="overflow-hidden pb-5 text-[15px] leading-[1.65] text-[#3a4048] data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down dark:text-[#a9b2bd]"
             >
               {faq.answer}
             </Accordion.Content>

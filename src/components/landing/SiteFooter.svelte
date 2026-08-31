@@ -32,7 +32,7 @@
   ];
 </script>
 
-<footer class="bg-[#101318] text-[#c9cdd3]">
+<footer class="bg-[#101318] text-[#c9cdd3] dark:border-t dark:border-white/8 dark:bg-[#07090d]">
   <div class="mx-auto max-w-[1200px] px-6 pt-16 pb-10 sm:px-10 sm:pt-20">
     <div class="grid grid-cols-1 gap-12 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-16">
       <!-- brand -->

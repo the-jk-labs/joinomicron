@@ -8,7 +8,7 @@
   <div class="grid grid-cols-1 gap-12 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-16">
     <div>
       <h2
-        class="font-serif text-[34px] leading-[1.1] font-bold tracking-tight text-[#101418] sm:text-[42px]"
+        class="font-serif text-[34px] leading-[1.1] font-bold tracking-tight text-[#101418] sm:text-[42px] dark:text-[#f4f4ef]"
       >
         Our story
       </h2>
@@ -19,11 +19,11 @@
         width={image.attributes.width}
         height={image.attributes.height}
         alt="Omicron writer rabbit illustration"
-        class="mt-8 w-full max-w-[360px] rounded-2xl object-cover"
+        class="mt-8 w-full max-w-[360px] rounded-2xl object-cover dark:bg-[#14181f] dark:p-4 dark:ring-1 dark:ring-white/8"
       />
     </div>
 
-    <div class="space-y-5 text-[17px] leading-[1.65] text-[#3a4048]">
+    <div class="space-y-5 text-[17px] leading-[1.65] text-[#3a4048] dark:text-[#a9b2bd]">
       <p>
         Omicron began with a simple observation: the web's best writing
         shouldn't be locked inside walled gardens. We believe publishing online

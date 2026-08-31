@@ -26,10 +26,10 @@ const faqImage = await getImage({
 ---
 
 <BaseLayout>
-  <SiteHeader />
+  <SiteHeader client:load />
 
   <!-- hero: full-height artwork panel -->
-  <div class="relative flex min-h-dvh w-full items-center overflow-hidden">
+  <div class="relative isolate flex min-h-dvh w-full items-center overflow-hidden dark:bg-[#0b0d12]">
     <Image
       src={landing}
       alt=""
@@ -39,13 +39,19 @@ const faqImage = await getImage({
       fetchpriority="high"
       class="pointer-events-none absolute inset-0 -z-10 h-full w-full object-cover object-[18%_top] select-none sm:object-[70%_center]"
     />
+    <!-- dark-mode overlay: dims the artwork into a rich night scene -->
+    <div
+      aria-hidden="true"
+      class="pointer-events-none absolute inset-0 -z-10 bg-none transition-colors duration-500 dark:bg-[linear-gradient(180deg,rgba(8,10,16,0.66)_0%,rgba(8,10,16,0.58)_42%,rgba(11,13,18,0.94)_88%,#0b0d12_100%)]"
+    >
+    </div>
     <main class="relative z-10 w-full px-6 pb-16 sm:px-12 lg:pr-[6%] lg:pl-[7.5%]">
       <Hero />
     </main>
   </div>
 
   <!-- scrollable content -->
-  <div class="bg-white">
+  <div class="bg-white transition-colors duration-500 dark:bg-[#0b0d12]">
     <OurStory image={rabbitImage} />
     <Features />
     <Faq client:load image={faqImage} />
