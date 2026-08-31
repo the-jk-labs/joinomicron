@@ -1,3 +1,9 @@
+<script lang="ts">
+  import type { GetImageResult } from "astro:assets";
+
+  let { image }: { image: GetImageResult } = $props();
+</script>
+
 <section id="story" class="mx-auto max-w-[1200px] px-6 py-20 sm:px-10 sm:py-28">
   <div class="grid grid-cols-1 gap-12 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-16">
     <div>
@@ -7,9 +13,13 @@
         Our story
       </h2>
       <img
-        src="/writer_rabbit.png"
+        src={image.src}
+        srcset={image.srcset}
+        sizes="(max-width: 1024px) 90vw, 360px"
+        width={image.attributes.width}
+        height={image.attributes.height}
         alt="Omicron writer rabbit illustration"
-        class="mt-8 aspect-[1349/1166] w-full max-w-[360px] rounded-2xl object-cover"
+        class="mt-8 w-full max-w-[360px] rounded-2xl object-cover"
       />
     </div>
 

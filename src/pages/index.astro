@@ -1,5 +1,5 @@
 ---
-import { Image } from "astro:assets";
+import { Image, getImage } from "astro:assets";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import SiteHeader from "../components/landing/SiteHeader.svelte";
 import Hero from "../components/landing/Hero.svelte";
@@ -9,6 +9,13 @@ import Faq from "../components/landing/Faq.svelte";
 import Contact from "../components/landing/Contact.svelte";
 import SiteFooter from "../components/landing/SiteFooter.svelte";
 import landing from "../assets/landing.png";
+import writerRabbit from "../assets/writer_rabbit.png";
+
+const rabbitImage = await getImage({
+  src: writerRabbit,
+  width: 720,
+  format: "webp",
+});
 ---
 
 <BaseLayout>
@@ -32,7 +39,7 @@ import landing from "../assets/landing.png";
 
   <!-- scrollable content -->
   <div class="bg-white">
-    <OurStory />
+    <OurStory image={rabbitImage} />
     <Features />
     <Faq client:load />
     <Contact />
