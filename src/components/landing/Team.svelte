@@ -102,7 +102,7 @@
                         <path d="M24 12.073C24 5.404 18.627 0 12 0S0 5.404 0 12.073c0 6.02 4.388 11.009 10.125 11.927v-8.437H7.078v-3.49h3.047V9.413c0-3.025 1.792-4.697 4.533-4.697 1.313 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.931-1.956 1.887v2.264h3.328l-.532 3.49h-2.796V24C19.612 23.082 24 18.093 24 12.073z" />
                       </svg>
                     {:else}
-                      <span aria-hidden="true" class="h-[18px] w-[18px] bg-current [mask-image:url('/omicron-mark.svg')] [mask-size:contain] [mask-position:center] [mask-repeat:no-repeat]"></span>
+                      <img src="/logo.png" alt="" class="h-[18px] w-[18px]" />
                     {/if}
                   </a>
                 </li>
