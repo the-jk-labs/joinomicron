@@ -25,21 +25,21 @@
   aria-labelledby="team-heading"
   class="scroll-mt-16 border-t border-[#e8e4dc] bg-[#faf8f4] dark:border-white/8 dark:bg-[#10141b]"
 >
-  <div class="mx-auto max-w-[1200px] px-6 py-20 sm:px-10 sm:py-28">
+  <div class="mx-auto max-w-[1200px] px-6 py-16 sm:px-10 sm:py-20">
     <div class="mx-auto max-w-[560px] text-center">
-      <h2 id="team-heading" class="font-serif text-[36px] leading-[1.1] font-bold tracking-tight text-[#101418] sm:text-[44px] dark:text-[#f4f4ef]">
+      <h2 id="team-heading" class="font-serif text-[34px] leading-[1.1] font-bold tracking-tight text-[#101418] sm:text-[40px] dark:text-[#f4f4ef]">
         Meet the team
       </h2>
-      <p class="mx-auto mt-5 max-w-[440px] text-[16px] leading-[1.7] text-pretty text-[#606873] sm:text-[17px] dark:text-[#a9b2bd]">
+      <p class="mx-auto mt-4 max-w-[440px] text-[16px] leading-[1.6] text-pretty text-[#606873] dark:text-[#a9b2bd]">
         We build, test, and secure Omicron so writers can focus on what matters:
         their words.
       </p>
     </div>
 
-    <div class="mx-auto mt-14 grid max-w-[960px] grid-cols-2 gap-x-8 gap-y-0 min-[560px]:grid-cols-4 md:mt-16 md:grid-cols-6 md:gap-x-10">
+    <div class="mx-auto mt-10 grid max-w-[900px] grid-cols-2 gap-x-8 gap-y-0 min-[560px]:grid-cols-4 md:mt-12 md:grid-cols-6 md:gap-x-10">
       {#each members as member, index (member.name)}
-        <article class="col-span-2 row-span-4 grid grid-rows-subgrid justify-items-center pb-12 text-center last:pb-0 md:pb-16 md:[&:nth-child(n+4)]:pb-0 {index === 3 ? 'md:col-start-2' : ''} {index === 4 ? 'min-[560px]:col-start-2 md:col-start-auto' : ''}">
-          <div class="mb-6 w-[180px] rounded-full bg-white p-1.5 ring-1 ring-[#e8e4dc] sm:w-[192px] dark:bg-[#1b2029] dark:ring-white/10">
+        <article class="col-span-2 flex flex-col items-center pb-9 text-center last:pb-0 md:row-span-4 md:grid md:grid-rows-subgrid md:justify-items-center md:pb-12 md:[&:nth-child(n+4)]:pb-0 {index === 3 ? 'md:col-start-2' : ''} {index === 4 ? 'min-[560px]:col-start-2 md:col-start-auto' : ''}">
+          <div class="mb-4 w-[144px] rounded-full bg-white p-1.5 ring-1 ring-[#e8e4dc] sm:w-[160px] md:mb-5 dark:bg-[#1b2029] dark:ring-white/10">
             <div class="aspect-square overflow-hidden rounded-full bg-[#e8e4dc] dark:bg-[#252b35]">
               <img
                 src={member.image.src}
@@ -55,10 +55,10 @@
               />
             </div>
           </div>
-          <h3 class="mb-2 max-w-[250px] text-[19px] leading-[1.4] font-semibold tracking-[-0.025em] text-balance text-[#101418] sm:text-[20px] dark:text-[#f4f4ef]">
+          <h3 class="mb-1.5 max-w-[250px] text-[18px] leading-[1.35] font-semibold tracking-[-0.025em] text-balance text-[#101418] sm:text-[19px] md:mb-2 md:self-start dark:text-[#f4f4ef]">
             {member.name}
           </h3>
-          <p class="mb-4 max-w-[260px] text-[14px] leading-[1.6] text-[#606873] dark:text-[#a9b2bd]">
+          <p class="mb-3 max-w-[260px] text-[14px] leading-[1.5] text-[#606873] md:mb-4 md:self-start dark:text-[#a9b2bd]">
             {member.role}
           </p>
           {#if member.contacts}
