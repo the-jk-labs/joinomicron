@@ -4,6 +4,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import SiteHeader from "../components/landing/SiteHeader.svelte";
 import Hero from "../components/landing/Hero.svelte";
 import OurStory from "../components/landing/OurStory.svelte";
+import Team from "../components/landing/Team.svelte";
 import Features from "../components/landing/Features.svelte";
 import Faq from "../components/landing/Faq.svelte";
 import Contact from "../components/landing/Contact.svelte";
@@ -11,6 +12,11 @@ import SiteFooter from "../components/landing/SiteFooter.svelte";
 import landing from "../assets/landing.png";
 import writerRabbit from "../assets/writer_rabbit.png";
 import faqArt from "../assets/FAQ.png";
+import subhanGadirli from "../assets/team/subhan-gadirli.jpeg";
+import yusifAliyev from "../assets/team/yusif-aliyev.png";
+import olafLaitinen from "../assets/team/olaf-laitinen.jpg";
+import nurayAliyeva from "../assets/team/nuray-aliyeva.jpg";
+import rafigAziz from "../assets/team/rafig-aziz.jpg";
 
 const rabbitImage = await getImage({
   src: writerRabbit,
@@ -23,6 +29,208 @@ const faqImage = await getImage({
   width: 720,
   format: "webp",
 });
+
+const [subhanImage, yusifImage, olafImage, nurayImage, rafigImage] =
+  await Promise.all(
+    [subhanGadirli, yusifAliyev, olafLaitinen, nurayAliyeva, rafigAziz].map(
+      (src) => getImage({ src, width: 640, format: "webp" }),
+    ),
+  );
+
+const team = [
+  {
+    name: "Subhan Gadirli",
+    role: "Founder & Full-Stack Developer",
+    image: subhanImage,
+    position: "50% 40%",
+    scale: 1.12,
+    contacts: [
+      {
+        label: "Email Subhan Gadirli",
+        href: "mailto:subhanqedirli@protonmail.com",
+        icon: "mail",
+      },
+      {
+        label: "Subhan Gadirli's website",
+        href: "https://jkgadirli.dev/",
+        icon: "website",
+      },
+      {
+        label: "Subhan Gadirli on GitHub",
+        href: "https://github.com/subhangadirli",
+        icon: "github",
+      },
+      {
+        label: "Subhan Gadirli on Mastodon",
+        href: "https://mastodon.social/@subhanqedirli",
+        icon: "mastodon",
+      },
+      {
+        label: "Subhan Gadirli on LinkedIn",
+        href: "https://www.linkedin.com/in/subhangadirli",
+        icon: "linkedin",
+      },
+      {
+        label: "Subhan Gadirli on X",
+        href: "https://x.com/subhangadirli",
+        icon: "x",
+      },
+      {
+        label: "Subhan Gadirli on Omicron",
+        href: "https://omicron.blog/@subhangadirli",
+        icon: "omicron",
+      },
+    ],
+  },
+  {
+    name: "Yusif Aliyev",
+    role: "Software Engineer",
+    image: yusifImage,
+    position: "50% 35%",
+    contacts: [
+      {
+        label: "Email Yusif Aliyev",
+        href: "mailto:yusifaliyevpro@proton.me",
+        icon: "mail",
+      },
+      {
+        label: "Yusif Aliyev's website",
+        href: "https://yusifaliyevpro.com/",
+        icon: "website",
+      },
+      {
+        label: "Yusif Aliyev on GitHub",
+        href: "https://github.com/yusifaliyevpro",
+        icon: "github",
+      },
+      {
+        label: "Yusif Aliyev on Mastodon",
+        href: "https://mastodon.social/@yusifaliyevpro",
+        icon: "mastodon",
+      },
+      {
+        label: "Yusif Aliyev on LinkedIn",
+        href: "https://www.linkedin.com/in/yusifaliyevpro",
+        icon: "linkedin",
+      },
+      {
+        label: "Yusif Aliyev on X",
+        href: "https://x.com/yusifaliyevpro",
+        icon: "x",
+      },
+      {
+        label: "Yusif Aliyev on Omicron",
+        href: "https://omicron.blog/@yusifaliyevpro",
+        icon: "omicron",
+      },
+    ],
+  },
+  {
+    name: "Olaf Yunus Laitinen Imanov",
+    role: "Quality Assurance Engineer",
+    image: olafImage,
+    position: "50% 30%",
+    contacts: [
+      {
+        label: "Email Olaf Yunus Laitinen Imanov",
+        href: "mailto:yunus.z.imanov@helsinki.fi",
+        icon: "mail",
+      },
+      {
+        label: "Olaf Yunus Laitinen Imanov on GitHub",
+        href: "https://github.com/olaflaitinen",
+        icon: "github",
+      },
+      {
+        label: "Olaf Yunus Laitinen Imanov on ORCID",
+        href: "https://orcid.org/0009-0004-6406-3227",
+        icon: "orcid",
+      },
+      {
+        label: "Olaf Yunus Laitinen Imanov on LinkedIn",
+        href: "https://www.linkedin.com/in/olafylimanov/",
+        icon: "linkedin",
+      },
+      {
+        label: "Olaf Yunus Laitinen Imanov on Facebook",
+        href: "https://www.facebook.com/olaflaitinen/",
+        icon: "facebook",
+      },
+      {
+        label: "Olaf Yunus Laitinen Imanov on X",
+        href: "https://x.com/olaflaitinen",
+        icon: "x",
+      },
+      {
+        label: "Olaf Yunus Laitinen Imanov on Omicron",
+        href: "https://omicron.blog/@olaflaitinen",
+        icon: "omicron",
+      },
+    ],
+  },
+  {
+    name: "Nuray Aliyeva",
+    role: "Penetration Tester",
+    image: nurayImage,
+    position: "50% 38%",
+    contacts: [
+      {
+        label: "Email Nuray Aliyeva",
+        href: "mailto:Nuraylieva0161@gmail.com",
+        icon: "mail",
+      },
+      {
+        label: "Nuray Aliyeva on LinkedIn",
+        href: "https://www.linkedin.com/in/nuray-aliyeva-59a447336/",
+        icon: "linkedin",
+      },
+      {
+        label: "Nuray Aliyeva on TryHackMe",
+        href: "https://tryhackme.com/p/Nrylve",
+        icon: "tryhackme",
+      },
+      {
+        label: "Nuray Aliyeva on GitHub",
+        href: "https://github.com/nrylve",
+        icon: "github",
+      },
+      {
+        label: "Nuray Aliyeva on Omicron",
+        href: "https://omicron.blog/@nrylve",
+        icon: "omicron",
+      },
+    ],
+  },
+  {
+    name: "Rafig Aziz",
+    role: "Quality Assurance Engineer",
+    image: rafigImage,
+    position: "54% 27%",
+    scale: 2.5,
+    contacts: [
+      {
+        label: "Email Rafig Aziz",
+        href: "mailto:rafiqaziz636@gmail.com",
+        icon: "mail",
+      },
+      {
+        label: "Rafig Aziz on LinkedIn",
+        href: "https://www.linkedin.com/in/rafiq-aziz-10aa12269/",
+        icon: "linkedin",
+      },
+      {
+        label: "Rafig Aziz on GitHub",
+        href: "https://github.com/RafiqAziz07",
+        icon: "github",
+      },
+      {
+        label: "Rafig Aziz on Omicron",
+        href: "https://omicron.blog/@rafigaziz",
+        icon: "omicron",
+      },
+    ],
+  },
+];
 ---
 
 <BaseLayout>
@@ -55,6 +263,7 @@ const faqImage = await getImage({
   <!-- scrollable content -->
   <div class="bg-white transition-colors duration-500 dark:bg-[#0b0d12]">
     <OurStory image={rabbitImage} />
+    <Team members={team} />
     <Features />
     <Faq client:load image={faqImage} />
     <Contact />
