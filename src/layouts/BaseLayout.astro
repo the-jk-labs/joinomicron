@@ -55,7 +55,7 @@ const imageAlt = title;
         var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
         var dark = stored === "dark" || (stored !== "light" && stored !== "dark" && prefersDark);
         if (dark) document.documentElement.classList.add("dark");
-        document.body.classList.add("no-transitions");
+        document.documentElement.classList.add("no-transitions");
       })();
     </script>
   </head>
@@ -63,7 +63,7 @@ const imageAlt = title;
     <slot />
     <script is:inline>
       window.setTimeout(function () {
-        document.body.classList.remove("no-transitions");
+        document.documentElement.classList.remove("no-transitions");
       }, 100);
     </script>
   </body>
