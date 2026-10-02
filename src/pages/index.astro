@@ -4,6 +4,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import SiteHeader from "../components/landing/SiteHeader.svelte";
 import Hero from "../components/landing/Hero.svelte";
 import OurStory from "../components/landing/OurStory.svelte";
+import Team from "../components/landing/Team.svelte";
 import Features from "../components/landing/Features.svelte";
 import Faq from "../components/landing/Faq.svelte";
 import Contact from "../components/landing/Contact.svelte";
@@ -11,6 +12,11 @@ import SiteFooter from "../components/landing/SiteFooter.svelte";
 import landing from "../assets/landing.png";
 import writerRabbit from "../assets/writer_rabbit.png";
 import faqArt from "../assets/FAQ.png";
+import subhanGadirli from "../assets/team/subhan-gadirli.jpeg";
+import yusifAliyev from "../assets/team/yusif-aliyev.png";
+import olafLaitinen from "../assets/team/olaf-laitinen.jpg";
+import nurayAliyeva from "../assets/team/nuray-aliyeva.jpg";
+import rafigAziz from "../assets/team/rafig-aziz.jpg";
 
 const rabbitImage = await getImage({
   src: writerRabbit,
@@ -23,6 +29,46 @@ const faqImage = await getImage({
   width: 720,
   format: "webp",
 });
+
+const [subhanImage, yusifImage, olafImage, nurayImage, rafigImage] =
+  await Promise.all(
+    [subhanGadirli, yusifAliyev, olafLaitinen, nurayAliyeva, rafigAziz].map(
+      (src) => getImage({ src, width: 640, format: "webp" }),
+    ),
+  );
+
+const team = [
+  {
+    name: "Subhan Gadirli",
+    role: "Founder & Fullstack Developer",
+    image: subhanImage,
+    position: "50% 35%",
+  },
+  {
+    name: "Yusif Aliyev",
+    role: "Software Engineer",
+    image: yusifImage,
+    position: "50% 30%",
+  },
+  {
+    name: "Olaf Yunus Laitinen Imanov",
+    role: "Quality Assurance Engineer",
+    image: olafImage,
+    position: "50% 20%",
+  },
+  {
+    name: "Nuray Aliyeva",
+    role: "Penetration Tester",
+    image: nurayImage,
+    position: "50% 20%",
+  },
+  {
+    name: "Rafig Aziz",
+    role: "Quality Assurance Engineer",
+    image: rafigImage,
+    position: "50% 30%",
+  },
+];
 ---
 
 <BaseLayout>
@@ -55,6 +101,7 @@ const faqImage = await getImage({
   <!-- scrollable content -->
   <div class="bg-white transition-colors duration-500 dark:bg-[#0b0d12]">
     <OurStory image={rabbitImage} />
+    <Team members={team} />
     <Features />
     <Faq client:load image={faqImage} />
     <Contact />

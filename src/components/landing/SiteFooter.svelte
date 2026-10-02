@@ -24,6 +24,7 @@
       heading: "Project",
       links: [
         { label: "About", href: "#story" },
+        { label: "Team", href: "#team" },
         { label: "FAQ", href: "#faq" },
         { label: "Contact", href: "#contact" },
         { label: "Privacy", href: "#" },
