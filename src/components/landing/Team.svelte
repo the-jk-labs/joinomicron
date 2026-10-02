@@ -1,6 +1,6 @@
 <script lang="ts">
   import type { GetImageResult } from "astro:assets";
-  import { Github, Globe, Linkedin, Mail } from "lucide-svelte";
+  import { Github, Globe, Linkedin, Mail, Terminal } from "lucide-svelte";
 
   type ContactLink = {
     label: string;
@@ -79,6 +79,8 @@
                       <Globe class="h-4 w-4" strokeWidth={1.8} aria-hidden="true" />
                     {:else if contact.icon === "github"}
                       <Github class="h-4 w-4" strokeWidth={1.8} aria-hidden="true" />
+                    {:else if contact.icon === "tryhackme"}
+                      <Terminal class="h-4 w-4" strokeWidth={1.8} aria-hidden="true" />
                     {:else if contact.icon === "mastodon"}
                       <svg viewBox="0 0 24 24" fill="currentColor" class="h-4 w-4" aria-hidden="true">
                         <path
