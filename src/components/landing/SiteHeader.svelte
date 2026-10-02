@@ -20,7 +20,7 @@
       <span class="text-[17px] font-semibold tracking-tight text-[#101418] dark:text-[#f0f0eb]"> Omicron </span>
     </a>
 
-    <nav class="hidden items-center gap-7 md:flex">
+    <nav class="hidden items-center gap-7 lg:flex">
       {#each links as link (link.href)}
         <a
           href={link.href}
