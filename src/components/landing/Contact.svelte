@@ -1,25 +1,28 @@
 <script lang="ts">
-  const email = "omicronhq@protonmail.com";
-
   const contacts = [
     {
       title: "Press and media",
+      email: "press@omicron.blog",
       note: "For interviews, stories, and press-related questions.",
     },
     {
       title: "General questions",
+      email: "contact@omicron.blog",
       note: "New to Omicron or the fediverse? Start here.",
     },
     {
       title: "Hosting and instances",
+      email: "hosting@omicron.blog",
       note: "Questions about running or joining an instance.",
     },
     {
       title: "Legal and trademarks",
+      email: "legal@omicron.blog",
       note: "For legal notices, trademark, and brand usage.",
     },
     {
       title: "Security reports",
+      email: "security@omicron.blog",
       note: "To report vulnerabilities, please see our security policy first.",
     },
   ];
@@ -37,10 +40,10 @@
         <p class="mt-4 max-w-[420px] text-[17px] leading-[1.6] text-[#3a4048] dark:text-[#a9b2bd]">
           We read everything, and a human replies. Write to us at
           <a
-            href="mailto:{email}"
+            href="mailto:contact@omicron.blog"
             class="font-medium text-[#5b4fc4] underline underline-offset-4 transition-colors hover:text-[#463aa8] dark:text-[#ab92f0] dark:hover:text-[#cdbdf0]"
           >
-            {email}
+            contact@omicron.blog
           </a>
           and we'll route it to the right place.
         </p>
@@ -53,10 +56,10 @@
               {contact.title}
             </h3>
             <a
-              href="mailto:{email}"
+              href="mailto:{contact.email}"
               class="mt-1.5 inline-block text-[15px] font-medium text-[#5b4fc4] underline underline-offset-4 transition-colors hover:text-[#463aa8] dark:text-[#ab92f0] dark:hover:text-[#cdbdf0]"
             >
-              {email}
+              {contact.email}
             </a>
             <p class="mt-1.5 text-[14px] leading-[1.5] text-[#6a7078] dark:text-[#8c95a1]">
               {contact.note}
