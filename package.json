@@ -14,7 +14,9 @@
     "lint:fix": "oxlint --fix"
   },
   "dependencies": {
+    "@astrojs/vercel": "^11.0.16",
     "@lucide/svelte": "1.45.0",
+    "@vercel/analytics": "^2.0.1",
     "astro": "7.3.2",
     "bits-ui": "2.19.2",
     "svelte": "5.57.0"
