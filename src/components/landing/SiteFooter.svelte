@@ -44,6 +44,18 @@
         <p class="mt-4 max-w-[300px] text-[15px] leading-[1.6] text-[#9aa1a9]">
           A federated blogging platform that belongs to everyone.
         </p>
+        <a
+          href="https://www.opensourcealternatives.to"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="mt-5 inline-block max-w-full"
+        >
+          <img
+            src="https://www.opensourcealternatives.to/badge-osa.svg"
+            alt="As seen on Open Source Alternatives"
+            class="h-auto max-w-full"
+          />
+        </a>
       </div>
 
       <!-- link columns -->
