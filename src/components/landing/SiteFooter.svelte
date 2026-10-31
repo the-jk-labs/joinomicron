@@ -98,6 +98,7 @@
         </a>
         <a
           href="https://fosstodon.org/@OmicronHQ"
+          rel="me"
           aria-label="Mastodon"
           class="text-[#9aa1a9] transition-colors hover:text-white"
         >
